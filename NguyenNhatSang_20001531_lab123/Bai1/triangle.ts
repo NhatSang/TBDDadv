@@ -1,15 +1,10 @@
 export class Triangle{
-    private a:number;
-    private b:number;
-    private c:number;
+    private a:number =0;
+    private b:number=0;
+    private c:number=0;
 
-    constructor (a:number,b:number,c:number){
-        if(a<0 || b<0 || c<0 || !(a+b>c && a+c>b && b+c>a)){
-            this.a=0;
-            this.b=0;
-            this.c=0;
-        }
-        else{
+    constructor (a?:number,b?:number,c?:number){
+        if(a && b && c && a>0 && b>0 && c>0 && (a+b>c && a+c>b && b+c>a)){
             this.a=a;
             this.b=b;
             this.c=c;

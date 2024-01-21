@@ -3,12 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Triangle = void 0;
 var Triangle = /** @class */ (function () {
     function Triangle(a, b, c) {
-        if (a < 0 || b < 0 || c < 0 || !(a + b > c && a + c > b && b + c > a)) {
-            this.a = 0;
-            this.b = 0;
-            this.c = 0;
-        }
-        else {
+        this.a = 0;
+        this.b = 0;
+        this.c = 0;
+        if (a && b && c && a > 0 && b > 0 && c > 0 && (a + b > c && a + c > b && b + c > a)) {
             this.a = a;
             this.b = b;
             this.c = c;
